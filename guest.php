@@ -1268,9 +1268,9 @@ body .card .send .circle i {
       <h1>About<span style="color: #228b22"> Us</span></h1>
       <div class="about-resort">
         <div class="resort-img">
-          <img src="Images/bannerground.jpg" alt="" />
+          <img src="Images/about.jpg" alt="" />
         </div>
-        <div class="resort-info">
+        <div class="resort-info"> 
           <span
             >The <span style="color: #228b22">Maranan Resort</span> is
             owned by Jenelyn Maranan and opened for business on January 6,
