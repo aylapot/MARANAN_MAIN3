@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modesto's Packages</title>
+    <title>Maranan's Packages</title>
     <link rel="stylesheet" href="/CSS/package.css" />
     <link rel="website icon" type="png" href="/Images/logo.png" />
     <link
@@ -15,10 +15,12 @@
     />
   </head>
   <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
     * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat";
 }
 
 a {
@@ -26,12 +28,13 @@ a {
 }
 
 body {
-  background-color: #000;
+  background-color: #87CEFA;
 }
 
 #package-link {
   background-color: #228b22;
   padding: 5px;
+  
 }
 
 header {
@@ -95,6 +98,7 @@ header button {
 header .navlinks span {
   display: none;
 }
+
 
 /* IPAD SIZE */
 
@@ -174,9 +178,11 @@ header .navlinks span {
 #navbar {
   height: 50px;
   padding: 15px;
-  background-color: #000;
   position: fixed;
   top: 0;
+  transform: translateY(-10px);
+  background-color: #005f4b;
+  font-family: "Montserrat";
   width: 100%;
   z-index: 1000;
   transition: top 0.5s;
@@ -190,7 +196,7 @@ header .navlinks span {
 
 .package-section h1 {
   margin-top: 50px;
-  color: #32fb32;
+  color: #228b22;
   cursor: default;
   font-weight: 800;
   /* text-align: center; */
@@ -277,7 +283,13 @@ header .navlinks span {
   color: #fafafa;
   font-size: 17px;
 }
-
+#divider {
+  width: auto;
+  height: 100px;
+  /* background-color: blue; */
+  margin: 0 20px;
+  margin-bottom: 10px;
+}
   </style>
   <body>
     <header>
@@ -287,14 +299,16 @@ header .navlinks span {
             <li><a href="guest.php#home">Home</a></li>
             <li><a href="guest.php#story">Story</a></li>
             <li><a href="guest.php#about">About</a></li>
-            <li><a href="package.php" id="package-link">Packages</a></li>
+            <li><a href="package.php" id="package-link">Accommodation</a></li>
             <li><a href="guest.php#gallery">Gallery</a></li>
             <li><a href="guest.php#contact">Contact</a></li>
             <li>
-              <a href="index.php" id="btn_booking" target="_blank"
+              <a href="reservationform.php" id="btn_booking" target="_blank"
                 >BOOK NOW</a
               >
+          
             </li>
+            <li><a href="index.php" id="btn_login">Login</a></li>
           </ul>
           <span class="fa fa-bars" onclick="menutoggle()"></span>
         </div>
@@ -302,9 +316,7 @@ header .navlinks span {
     </header>
 
     <section class="package-section" id="package">
-      <h1>Packages</h1>
-     
-      </div>
+      <h1>Cottages</h1>
 
       <!-- FIRST PACKAGE -->
       <!-- FIRST PACKAGE -->
@@ -315,16 +327,46 @@ header .navlinks span {
 
       <div class="package-items">
         <div class="package-img">
-          <img src="Images/Gallery3.jpg" alt="" />
+          <img src="Images/10p(4h).jpg" alt="" />
         </div>
         <div class="package-info">
-          <span id="package-title">Daytour <span style="color: #32fb32;">Weekdays</span></span>
-          <span id="package-time" style="color: #32fb32;">9:00 AM - 5:00 PM</span>
+          <span id="package-title">Pavilion <span style="color: #228b22;"></span></span>
+          <span id="package-time" style="color: #228b22;">8:00 AM - 5:00 PM</span>
           <span id="package-prices"
-            ><span style="color: #32fb32;">Entrance Fee</span> : 150Php per head (Minimum of 15pax)</span
+            ><span style="color: #228b22;">Entrance Fee</span> : 150Php per head (Minimum of 10pax)</span
           >
           <span id="package-prices">
-            <span style="color: #32fb32;">Add-Ons</span> : Air-Conditioned Room - 1500Php per room
+            <span style="color: #228b22;">Add-Ons</span> : Videoke-100Php
+          </span>
+        
+          <span id="package-prices">
+            100Php - fee for bbq grill 
+          </span>
+          <span id="package-prices" style="color: #228b22;"> Rental Fee : 400Php </span>
+        </div>
+      </div>
+
+ 
+<div class="divider" id="divider"></div>
+      <!-- SECOND PACKAGE -->
+      <!-- SECOND PACKAGE -->
+      <!-- SECOND PACKAGE -->
+      <!-- SECOND PACKAGE -->
+      <!-- SECOND PACKAGE -->
+      <!-- SECOND PACKAGE -->
+
+      <div class="package-items">
+        <div class="package-img">
+          <img src="Images/12p(5h).jpg" alt="" />
+        </div>
+        <div class="package-info">
+          <span id="package-title">Daytour Weekdends & <span style="color: #228b22;">Holidays</span></span>
+          <span id="package-time" style="color: #228b22;">9:00 AM - 5:00 PM</span>
+          <span id="package-prices"
+            ><span style="color: #228b22;">Entrance Fee</span> : 150Php per head (Minimum of 12pax)</span
+          >
+          <span id="package-prices">
+            <span style="color:#228b22;">Add-Ons</span> : Air-Conditioned Room - 1500Php per room
           </span>
           <span id="package-prices">
             200Php - one time fee for bringing-in liquor
@@ -332,220 +374,11 @@ header .navlinks span {
           <span id="package-prices">
             200Php - one time fee for LPG consumption
           </span>
-          <span id="package-prices" style="color: #32fb32;"> Rental Fee : 3500Php </span>
+          <span id="package-prices" style="color: #228b22;"> Rental Fee : 500Php </span>
         </div>
       </div>
-
-      <div class="package-details">
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>20% discount for PWD and Senior Citizens only</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Children below 3 feet of height - Free of Charge</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Swimming Pool(Adult,Kiddie,Jacuzzi)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Pavillion Hall(With Cushioned Sofas)</span>
-          </div>
-        </div>
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Pool Deck Area(with Loungers)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Gazebo(with cushioned sofas)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span
-              >Sports Facilities ( Basketball , Billiard , Badminton ,
-              Volleyball , Dart , Chess , and Air Hockey)</span
-            >
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Multi-purpose Area(with Cignal TV)</span>
-          </div>
-        </div>
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Garden Area(with concrete tables and benches)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Cooking and Grilling Area</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Videoke / Netflix / Sound System</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Farm Walking/Roaming Area</span>
-          </div>
-        </div>
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Secured Parking Area</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Children's Playground</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Free WI-FI</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Free Unlimited Drinking Water</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECOND PACKAGE -->
-      <!-- SECOND PACKAGE -->
-      <!-- SECOND PACKAGE -->
-      <!-- SECOND PACKAGE -->
-      <!-- SECOND PACKAGE -->
-      <!-- SECOND PACKAGE -->
-
-      <div class="package-items">
-        <div class="package-img">
-          <img src="Images/Gallery4.jpg" alt="" />
-        </div>
-        <div class="package-info">
-          <span id="package-title">Daytour Weekdends & <span style="color: #32fb32;">Holidays</span></span>
-          <span id="package-time" style="color: #32fb32;">9:00 AM - 5:00 PM</span>
-          <span id="package-prices"
-            ><span style="color: #32fb32;">Entrance Fee</span> : 150Php per head (Minimum of 15pax)</span
-          >
-          <span id="package-prices">
-            <span style="color: #32fb32;">Add-Ons</span> : Air-Conditioned Room - 1500Php per room
-          </span>
-          <span id="package-prices">
-            200Php - one time fee for bringing-in liquor
-          </span>
-          <span id="package-prices">
-            200Php - one time fee for LPG consumption
-          </span>
-          <span id="package-prices" style="color: #32fb32;"> Rental Fee : 4000Php </span>
-        </div>
-      </div>
-
-      <div class="package-details">
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>20% discount for PWD and Senior Citizens only</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Children below 3 feet of height - Free of Charge</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Swimming Pool(Adult,Kiddie,Jacuzzi)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Pavillion Hall(With Cushioned Sofas)</span>
-          </div>
-        </div>
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Pool Deck Area(with Loungers)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Gazebo(with cushioned sofas)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span
-              >Sports Facilities ( Basketball , Billiard , Badminton ,
-              Volleyball , Dart , Chess , and Air Hockey)</span
-            >
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Multi-purpose Area(with Cignal TV)</span>
-          </div>
-        </div>
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Garden Area(with concrete tables and benches)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Cooking and Grilling Area</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Videoke / Netflix / Sound System</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Farm Walking/Roaming Area</span>
-          </div>
-        </div>
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Secured Parking Area</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Children's Playground</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Free WI-FI</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Free Unlimited Drinking Water</span>
-          </div>
-        </div>
-      </div>
-
+      <div class="divider" id="divider"></div>
+      
       <!-- THIRD PACKAGE -->
       <!-- THIRD PACKAGE -->
       <!-- THIRD PACKAGE -->
@@ -554,11 +387,11 @@ header .navlinks span {
 
       <div class="package-items">
         <div class="package-img">
-          <img src="Images/Gallery5.jpg" alt="" />
+          <img src="Images/20p(7h).jpg" alt="" />
         </div>
         <div class="package-info">
-          <span id="package-title">Day & Night Tour <span style="color: #32fb32;">(22hrs)</span></span>
-          <span id="package-time" style="color: #32fb32;">9:00 AM - 7:30 AM</span>
+          <span id="package-title">Day & Night Tour <span style="color: #228b22;">(22hrs)</span></span>
+          <span id="package-time" style="color: #228b22;">9:00 AM - 7:30 AM</span>
           <span id="package-prices">Good for 25 pax or less</span>
           <span id="package-prices">200Php - per head in excess of 25 pax</span>
 
@@ -569,110 +402,13 @@ header .navlinks span {
             200Php - one time fee for LPG consumption
           </span>
           <span id="package-prices">
-            <span style="color: #32fb32;">Rental Fee : Sunday - Thursday (16,900Php)</span></span
+            <span style="color: #228b22;">Rental Fee : Sunday - Thursday (16,900Php)</span></span
           >
-          <span id="package-prices" style="color: #32fb32;">Fri - Sat & Holidays (18,400Php)</span>
+          <span id="package-prices" style="color: #3228b22;">Fri - Sat & Holidays (18,400Php)</span>
         </div>
       </div>
-
-      <div class="package-details">
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Children below 3 feet of height - Free of Charge</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Swimming Pool(Adult,Kiddie,Jacuzzi)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Pavillion Hall(With Cushioned Sofas)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>2 Air-Conditioned room with C.R.</span>
-          </div>
-        </div>
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Pool Deck Area(with Loungers)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Gazebo(with cushioned sofas)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span
-              >Sports Facilities ( Basketball , Billiard , Badminton ,
-              Volleyball , Dart , Chess , and Air Hockey)</span
-            >
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Multi-purpose Area(with Cignal TV)</span>
-          </div>
-        </div>
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Garden Area(with concrete tables and benches)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Cooking and Grilling Area</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span
-              >Videoke / Netflix / Sound System ( *STRICLY NO VIDEOKE FROM 10PM
-              ONWARDS)</span
-            >
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Farm Walking/Roaming Area</span>
-          </div>
-        </div>
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Secured Parking Area</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Children's Playground</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Free WI-FI</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Free Unlimited Drinking Water</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Maximum of 4 Tents with bed, pillows and blanket</span>
-          </div>
-        </div>
-      </div>
-
+      <div class="divider" id="divider"></div>
+      
       <!-- FOURTH PACKAGE -->
       <!-- FOURTH PACKAGE -->
       <!-- FOURTH PACKAGE -->
@@ -681,11 +417,11 @@ header .navlinks span {
 
       <div class="package-items">
         <div class="package-img">
-          <img src="Images/Gallery15.jpg" alt="" />
+          <img src="Images/20p(1k).jpg" alt="" />
         </div>
         <div class="package-info">
-          <span id="package-title">Night & Day Tour <span style="color: #32fb32;">(22hrs)</span></span>
-          <span id="package-time" style="color: #32fb32;">6:30P PM - 5:00 PM</span>
+          <span id="package-title">Night & Day Tour <span style="color: #228b22;">(22hrs)</span></span>
+          <span id="package-time" style="color: #228b22;">6:30P PM - 5:00 PM</span>
           <span id="package-prices">Good for 25 pax or less</span>
           <span id="package-prices">200Php - per head in excess of 25 pax</span>
 
@@ -696,110 +432,13 @@ header .navlinks span {
             200Php - one time fee for LPG consumption
           </span>
           <span id="package-prices">
-            Rental Fee : <span style="color: #32fb32;">Sunday - Thursday (16,900Php)</span></span
+            Rental Fee : <span style="color: #228b22;">Sunday - Thursday (16,900Php)</span></span
           >
-          <span id="package-prices" style="color: #32fb32;">Fri - Sat & Holidays (18,400Php)</span>
+          <span id="package-prices" style="color: #228b22;">Fri - Sat & Holidays (18,400Php)</span>
         </div>
       </div>
 
-      <div class="package-details">
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Children below 3 feet of height - Free of Charge</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Swimming Pool(Adult,Kiddie,Jacuzzi)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Pavillion Hall(With Cushioned Sofas)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>2 Air-Conditioned room with C.R.</span>
-          </div>
-        </div>
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Pool Deck Area(with Loungers)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Gazebo(with cushioned sofas)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span
-              >Sports Facilities ( Basketball , Billiard , Badminton ,
-              Volleyball , Dart , Chess , and Air Hockey)</span
-            >
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Multi-purpose Area(with Cignal TV)</span>
-          </div>
-        </div>
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Garden Area(with concrete tables and benches)</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Cooking and Grilling Area</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span
-              >Videoke / Netflix / Sound System ( *STRICLY NO VIDEOKE FROM 10PM
-              ONWARDS)</span
-            >
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Farm Walking/Roaming Area</span>
-          </div>
-        </div>
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Secured Parking Area</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Children's Playground</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Free WI-FI</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Free Unlimited Drinking Water</span>
-          </div>
-
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Maximum of 4 Tents with bed, pillows and blanket</span>
-          </div>
-        </div>
-      </div>
-
+  <div class="divider" id="divider"></div>
       <!-- FIFTH PACKAGE -->
       <!-- FIFTH PACKAGE -->
       <!-- FIFTH PACKAGE -->
@@ -808,11 +447,11 @@ header .navlinks span {
 
       <div class="package-items">
         <div class="package-img">
-          <img src="Images/Gallery16.jpg" alt="" />
+          <img src="Images/IMG_4078.jpg" alt="" />
         </div>
         <div class="package-info">
-          <span id="package-title" style="color: #32fb32;">Overnight</span>
-          <span id="package-time" style="color: #32fb32;">6:30 PM - 7:30 AM</span>
+          <span id="package-title" style="color: #228b22;">Overnight</span>
+          <span id="package-time" style="color: #228b22;">6:30 PM - 7:30 AM</span>
           <span id="package-prices">Good for 25 pax or less</span>
           <span id="package-prices">180Php - per head in excess of 25 pax</span>
 
@@ -823,111 +462,262 @@ header .navlinks span {
             200Php - one time fee for LPG consumption
           </span>
           <span id="package-prices">
-            Rental Fee : <span style="color: #32fb32;">Sunday - Thursday (11,900Php)</span></span
+            Rental Fee : <span style="color: #228b22;">Sunday - Thursday (11,900Php)</span></span
           >
-          <span id="package-prices" style="color: #32fb32;">Fri - Sat & Holidays (12,900Php)</span>
+          <span id="package-prices" style="color: #228b22;">Fri - Sat & Holidays (12,900Php)</span>
         </div>
       </div>
 
-      <div class="package-details">
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Children below 3 feet of height - Free of Charge</span>
-          </div>
+      <div class="divider" id="divider"></div>
+      <!-- SIXTH PACKAGE -->
+      <!-- SIXTH PACKAGE -->
+      <!-- SIXTH PACKAGE -->
+      <!-- SIXTH PACKAGE -->
+      <!-- SIXTH PACKAGE -->
 
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Swimming Pool(Adult,Kiddie,Jacuzzi)</span>
-          </div>
+    <div class="package-items">
+      <div class="slideshow-container">
+      <!-- Slide 1 -->
+      <div class="slide package-img">
+      <img src="Images/IMG_4139.jpg" alt="Room 1" />
+      </div>
 
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Pavillion Hall(With Cushioned Sofas)</span>
-          </div>
+      <!-- Slide 2 -->
+      <div class="slide package-img">
+      <img src="Images/IMG_4140.jpg" alt="Room 2" />
+      </div>
 
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>2 Air-Conditioned room with C.R.</span>
-          </div>
-        </div>
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Pool Deck Area(with Loungers)</span>
-          </div>
+      <!-- Slide 3 -->
+      <div class="slide package-img">
+      <img src="Images/IMG_4141.jpg" alt="Room 2" />
+      </div>
 
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Gazebo(with cushioned sofas)</span>
-          </div>
+      <!-- Slide 4 -->
+      <div class="slide package-img">
+      <img src="Images/IMG_4142.jpg" alt="Room 2" />
+      </div>
 
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span
-              >Sports Facilities ( Basketball , Billiard , Badminton ,
-              Volleyball , Dart , Chess , and Air Hockey)</span
-            >
-          </div>
+      <!-- Slide 5 -->
+      <div class="slide package-img">
+      <img src="Images/IMG_4143.jpg" alt="Room 2" />
+      </div>
 
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Multi-purpose Area(with Cignal TV)</span>
-          </div>
-        </div>
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Garden Area(with concrete tables and benches)</span>
-          </div>
+      <!-- Slide navigation buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
 
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Cooking and Grilling Area</span>
-          </div>
+      <div class="package-info">
+        <span id="package-title" style="color: #ffffff;">Room 1</span>
+        <span id="package-time" style="color: #228b22;">6:30 PM - 7:30 AM</span>
+        <span id="package-prices">Good for 25 pax or less</span>
+        <span id="package-prices">180Php - per head in excess of 25 pax</span>
 
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span
-              >Videoke / Netflix / Sound System ( *STRICLY NO VIDEOKE FROM 10PM
-              ONWARDS)</span
-            >
-          </div>
+<style>
+  .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  .slide {
+    display: none;
+  }
 
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Farm Walking/Roaming Area</span>
-          </div>
-        </div>
-        <div class="package-details-info">
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Secured Parking Area</span>
-          </div>
+  .slide img {
+    width: 100%;
+    border-radius: 8px;
+  }
 
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Children's Playground</span>
-          </div>
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    transition: 0.6s ease;
+    user-select: none;
+  }
 
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Free WI-FI</span>
-          </div>
+  .prev {
+    left: 0;
+  }
 
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Free Unlimited Drinking Water</span>
-          </div>
+  .next {
+    right: 0;
+  }
 
-          <div class="package-details-info-items">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Maximum of 4 Tents with bed, pillows and blanket</span>
-          </div>
+  .package-info {
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+  }
+</style>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
+    let slides = document.getElementsByClassName("slide");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+  }
+</script>
+
+          <span id="package-prices">
+            200Php - one time fee for bringing-in liquor
+          </span>
+          <span id="package-prices">
+            200Php - one time fee for LPG consumption
+          </span>
+          <span id="package-prices">
+            Rental Fee : <span style="color: #228b22;">Sunday - Thursday (11,900Php)</span></span
+          >
+          <span id="package-prices" style="color: #228b22;">Fri - Sat & Holidays (12,900Php)</span>
         </div>
       </div>
-    </section>
 
+      <div class="divider" id="divider"></div>
+      <!-- SEVEN PACKAGE -->
+      <!-- SEVEN PACKAGE -->
+      <!-- SEVEN PACKAGE -->
+      <!-- SEVEN PACKAGE -->
+      <!-- SEVEN PACKAGE -->
+
+    <div class="package-items">
+      <div class="slideshow-container">
+      <!-- Slide 1 -->
+      <div class="slide package-img">
+      <img src="Images/IMG_4139.jpg" alt="Room 1" />
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide package-img">
+      <img src="Images/IMG_4144.jpg" alt="Room 2" />
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide package-img">
+      <img src="Images/IMG_4145.jpg" alt="Room 2" />
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide package-img">
+      <img src="Images/IMG_4146.jpg" alt="Room 2" />
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="slide package-img">
+      <img src="Images/IMG_4147.jpg" alt="Room 2" />
+      </div>
+
+      <!-- Slide navigation buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+      <div class="package-info">
+        <span id="package-title" style="color: #ffffff;">Room 1</span>
+        <span id="package-time" style="color: #228b22;">6:30 PM - 7:30 AM</span>
+        <span id="package-prices">Good for 25 pax or less</span>
+        <span id="package-prices">180Php - per head in excess of 25 pax</span>
+
+<style>
+  .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  .slide {
+    display: none;
+  }
+
+  .slide img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    transition: 0.6s ease;
+    user-select: none;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  .package-info {
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+  }
+</style>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
+    let slides = document.getElementsByClassName("slide");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+  }
+</script>
+
+          <span id="package-prices">
+            200Php - one time fee for bringing-in liquor
+          </span>
+          <span id="package-prices">
+            200Php - one time fee for LPG consumption
+          </span>
+          <span id="package-prices">
+            Rental Fee : <span style="color: #228b22;">Sunday - Thursday (11,900Php)</span></span
+          >
+          <span id="package-prices" style="color: #228b22;">Fri - Sat & Holidays (12,900Php)</span>
+        </div>
+      </div>
+
+      <div class="divider" id="divider"></div>
+
+    <section id="gallery" class="gallery-section">
+  <h2>Resort Gallery</h2>
+  <div class="gallery-grid">
+    <img src="Images/cottage1.jpg" alt="Cottage 1" onclick="openModal(this)">
+    <img src="Images/cottage2.jpg" alt="Cottage 2" onclick="openModal(this)">
+    <!-- Add more images as needed -->
+  </div>
+</section>
     <script src="JAVASCRIPT/package.js"></script>
   </body>
 </html>

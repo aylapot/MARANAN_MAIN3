@@ -1,3 +1,11 @@
+<?php
+include_once('./config/db.php');
+$sql = "SELECT * FROM reservations_data";
+$result = $con->query($sql);
+$completedreservations = 'SELECT * FROM reservations_data WHERE status = "Completed" ';
+$completedreservationsresult = $con->query($completedreservations);
+?>	
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -317,10 +325,6 @@ body {
 	left: calc(100% - (25px - 4px) - 2px);
 }
 /* NAVBAR */
-
-
-
-
 
 /* MAIN */
 #content main {
@@ -678,14 +682,18 @@ body {
           <li>
             <i class="bx bxs-calendar-check"></i>
             <span class="text">
-              <h3 id="total-reservations">0 /mo</h3>
+              <h3 id="total-reservations"><?php
+			  echo $result->num_rows; 
+			  ?></h3>
               <p>Reservations</p>
             </span>
           </li>
           <li>
             <i class="bx bxs-group"></i>
             <span class="text">
-              <h3 id="completed-reservations">0 /mo</h3>
+              <h3 id="completed-reservations"><?php
+			  echo $completedreservationsresult->num_rows;
+			  ?></h3>
               <p>Completed</p>
             </span>
           </li>

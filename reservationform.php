@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,6 +80,7 @@ header {
   transition: top 0.5s;
 }
 
+
 header ul {
   display: inline-block;
 }
@@ -135,6 +137,7 @@ header .navlinks span {
   padding: 15px;
   position: fixed;
   top: 0;
+  transform: translateY(-10px);
   background-color: #1034A6;
   width: 100%;
   z-index: 1000;
@@ -214,49 +217,83 @@ header .navlinks span {
     width: 350px;
   }
 }
+#time {
+    width: 100%;
+    height: 35px;
+}
 
 </style>
 <body>
 <header>
-      <div id="navbar">
+    <div id="navbar">
         <div class="navlinks">
-          <ul id="menulist">
-            <li><a href="guest.php#home">Home</a></li>
-            <li><a href="guest.php#story">Story</a></li>
-            <li><a href="guest.php#about">About</a></li>
-            <li><a href="package.php" id="package-link">Packages</a></li>
-            <li><a href="guest.php#gallery">Gallery</a></li>
-            <li><a href="guest.php#contact">Contact</a></li>
-            <li>
-              <a href="reservationform.php" id="btn_booking" target="_blank"
-                >BOOK NOW</a
-              >
-            </li>
-          </ul>
-          <span class="fa fa-bars" onclick="menutoggle()"></span>
+            <ul id="menulist">
+                <li><a href="guest.php#home">Home</a></li>
+                <li><a href="guest.php#story">Story</a></li>
+                <li><a href="guest.php#about">About</a></li>
+                <li><a href="package.php">Packages</a></li>
+                <li><a href="guest.php#gallery">Gallery</a></li>
+                <li><a href="guest.php#contact">Contact</a></li>
+                <li><a href="reservationform.php" target="_blank">Book Now</a></li>
+                <li><a href="index.php">Login</a></li>
+            </ul>
         </div>
-      </div>
-    </header>
-    <div class="container">
-        <h1>Reservation Form</h1>
-        <form id="reservationForm" method="POST" action="submit.php">
+    </div>
+</header>
+<div class="container">
+    <h1 class="text-center">Reservation Form</h1>
+    <form id="reservationForm" method="POST" action="submit.php" class="row g-3">
+        <div class="col-md-12">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
+            <input type="text" id="name" name="name" placeholder="First Name, Last Name" required>
+        </div>
+        <div class="col-md-12">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+        </div>
+        <div class="col-md-12">
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
-
+            <input type="tel" id="phone" name="phone" placeholder="09123456789" required>
+        </div>
+        <div class="col-md-12">
             <label for="date">Select Date:</label>
             <input type="date" id="date" name="date" required>
-            <div id="dateStatus"></div>
+        </div>
+        <div class="col-md-12">
+            <label for="time">Select Time:</label>
+            <select id="time" name="time" required>
+                <option value="">Select Time</option>
+                <option value ="Day">Day</option>
+                <option value="Night">Night</option>
+            </select>
+        </div>
+        <div class="col-md-12">
+            <label for="price">Price:</label>
+            <input id="price" name="price" required readonly>
+  </input>
+        </div>
 
-            <button type="submit">Reserve</button>
-        </form>
-    </div>
+        <div class="col-12 text-center">
+            <button class="btn btn-primary" type="submit">Reserve</button>
+        </div>
+    </form>
+</div>
+<script>
+const time = document.getElementById('time');
+const price = document.getElementById('price');
 
-    <script src="script.js"></script>
+time.addEventListener('change', function () {
+    const selectedValue = time.value;
+
+    if (selectedValue === 'Day') {
+        price.value = '120';
+    } else if (selectedValue === 'Night') {
+        price.value = '150';
+    }
+
+
+
+});
+</script>
 </body>
 </html>

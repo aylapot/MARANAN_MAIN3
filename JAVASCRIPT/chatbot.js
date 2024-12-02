@@ -136,13 +136,13 @@ const botReply = [
     "We have packages like DayTour Weekdays, DayTour Weekends & Holidays, Overnight, Day and Night for 22hrs. You can check their price lists in our Package Section.",
   ],
   [
-    "Maranan resort is located at Sitio 2, Sahingan, Balete, Batangas City you can search us in google, waze, maps.",
+    "Maranan resort is located at Sitio Durungao, Bauan, Batangas you can search us in google, waze, maps.",
   ],
   [
     "You can book in our home page by clicking 'book now!'. Then fill up the forms, input the date and time when you would visit our resort then click 'done'. Your reservation would be sent to our human representative and will sent you a confirmation email.Thank you!",
   ],
   [
-    "You can contact our human representative in our facebook page-https://www.facebook.com/profile.php?id=100090637717825&mibextid=JRoKGi, or contact us in this phone number-xxxxxxxxxx. For more details contact Ma'am Rowena Aguado in her facebook-https://www.facebook.com/rowena.aguado?mibextid=JRoKGi",
+    "You can contact our human representative in our facebook page-https://www.facebook.com/profile.php?id=100090637717825&mibextid=JRoKGi, or contact us in this phone number-xxxxxxxxxx. For more details contact Ma'am Jenelyn Maranan Cortez in her facebook-https://www.facebook.com/rowena.aguado?mibextid=JRoKGi",
   ],
   [
     "Our activities includes swimming, billiard, table hockey, darts, and many more.",
@@ -302,3 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // VOICE
+function menutoggle() {
+  const menu = document.getElementById("menulist");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}

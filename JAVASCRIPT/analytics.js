@@ -1,194 +1,72 @@
-const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
-
-allSideMenu.forEach(item=> {
-	const li = item.parentElement;
-
-	item.addEventListener('click', function () {
-		allSideMenu.forEach(i=> {
-			i.parentElement.classList.remove('active');
-		})
-		li.classList.add('active');
-	})
-});
-
-
-
-
-// TOGGLE SIDEBAR
-const menuBar = document.querySelector('#content nav .bx.bx-menu');
-const sidebar = document.getElementById('sidebar');
-
-menuBar.addEventListener('click', function () {
-	sidebar.classList.toggle('hide');
-})
-
-
-
-
-
-
-
-const searchButton = document.querySelector('#content nav form .form-input button');
-const searchButtonIcon = document.querySelector('#content nav form .form-input button .bx');
-const searchForm = document.querySelector('#content nav form');
-
-searchButton.addEventListener('click', function (e) {
-	if(window.innerWidth < 576) {
-		e.preventDefault();
-		searchForm.classList.toggle('show');
-		if(searchForm.classList.contains('show')) {
-			searchButtonIcon.classList.replace('bx-search', 'bx-x');
-		} else {
-			searchButtonIcon.classList.replace('bx-x', 'bx-search');
-		}
-	}
-})
-
-
-
-
-
-if(window.innerWidth < 768) {
-	sidebar.classList.add('hide');
-} else if(window.innerWidth > 576) {
-	searchButtonIcon.classList.replace('bx-x', 'bx-search');
-	searchForm.classList.remove('show');
-}
-
-
-window.addEventListener('resize', function () {
-	if(this.innerWidth > 576) {
-		searchButtonIcon.classList.replace('bx-x', 'bx-search');
-		searchForm.classList.remove('show');
-	}
-})
-
-
-
-const switchMode = document.getElementById('switch-mode');
-
-switchMode.addEventListener('change', function () {
-	if(this.checked) {
-		document.body.classList.add('dark');
-	} else {
-		document.body.classList.remove('dark');
-	}
-})
-document.addEventListener("DOMContentLoaded", function() {
-    // Doughnut Chart
-    var doughnutCtx = document.getElementById('doughnutChart').getContext('2d');
-    var doughnutChart = new Chart(doughnutCtx, {
-        type: 'doughnut',
-        data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: 'Doughnut Chart',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.5)',
-                    'rgba(54, 162, 235, 0.5)',
-                    'rgba(255, 206, 86, 0.5)',
-                    'rgba(75, 192, 192, 0.5)',
-                    'rgba(153, 102, 255, 0.5)',
-                    'rgba(255, 159, 64, 0.5)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            legend: {
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: 'Doughnut Chart'
-            },
-            animation: {
-                animateScale: true,
-                animateRotate: true
-            }
-        }
+// Fetch reservation data and update the UI
+async function fetchReservationData() {
+    try {
+      const response = await fetch('getReservations.php');
+      const data = await response.json();
+      console.log(data)
+  
+      // Update summary stats
+      document.getElementById('total-reservations').textContent = `${data.totalReservations} /mo`;
+      document.getElementById('completed-reservations').textContent = `${data.completedReservations} /mo`;
+      document.getElementById('total-sales').textContent = `₱${data.totalSales.toLocaleString()} /mo`;
+  
+      // Update charts
+      updateCharts(data);
+    } catch (error) {
+      console.error('Error fetching reservation data:', error);
+    }
+  }
+  
+  // Initialize and update charts
+  function updateCharts(data) {
+    const doughnutCtx = document.getElementById('doughnutChart').getContext('2d');
+    const lineCtx = document.getElementById('lineChart').getContext('2d');
+  
+    // Doughnut Chart for Reservation Types
+    new Chart(doughnutCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Completed', 'Pending'],
+        datasets: [{
+          label: 'Reservations',
+          data: [data.completedReservations, data.totalReservations - data.completedReservations],
+          backgroundColor: ['#3C91E6', '#FD7238'],
+        }],
+      },
     });
-
-    // Line Chart
-    var lineCtx = document.getElementById('lineChart').getContext('2d');
-    var lineChart = new Chart(lineCtx, {
-        type: 'line',
-        data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-            datasets: [{
-                label: 'Line Chart',
-                data: [65, 59, 80, 81, 56, 55, 40],
-                fill: false,
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 2
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            legend: {
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: 'Line Chart'
-            }
-        }
+  
+    // Line Chart for Monthly Reservations
+    new Chart(lineCtx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          label: 'Reservations',
+          data: data.reservationsByMonth,
+          borderColor: '#3C91E6',
+          fill: false,
+        }],
+      },
     });
-
-    // Bar Chart
-    var barCtx = document.getElementById('forecastChart').getContext('2d');
-    var barChart = new Chart(barCtx, {
-        type: 'bar',
-        data: {
-            labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-            datasets: [{
-                label: 'Bar Chart',
-                data: [12, 19, 3, 5, 2],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.5)',
-                    'rgba(54, 162, 235, 0.5)',
-                    'rgba(255, 206, 86, 0.5)',
-                    'rgba(75, 192, 192, 0.5)',
-                    'rgba(153, 102, 255, 0.5)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            legend: {
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: 'Bar Chart'
-            },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
-    });
-
-    // Additional charts can be initialized similarly as needed
-
-});
+  }
+  
+  // Fetch data on page load
+  document.addEventListener('DOMContentLoaded', fetchReservationData);
 
 
-// 
+// $(document).ready(function() {
+//     conts name = new URLSearchParams(window.location.search).get('name');
+//     const response =await fetch(`http://localhost:3000/submit-reservation?name=${name}`);
+//     const data = await response.json();
 
+//     let html = '';
+//     if (data) {
+//         html += `
+//             <div class="reservation">
+//                 <h2>Reservation Details</h2>
+//                 <p><strong>Name:</strong> ${data.name}</p>
+//                 <p><strong>Email:</strong> ${data.email}</p>
+//                 <p><strong>Phone:</strong> ${data.phone}</p>
+//                 <p><strong>Package:</strong> ${data.package}</p>
+//                 <p><strong>Guests:</strong> ${data.guests}</p>
+//                 <p><strong>Date:</strong> ${data.date}</p>

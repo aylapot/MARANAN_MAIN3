@@ -41,14 +41,6 @@
     <link rel="website icon" type="png" href="Images/marananLogo.jpg" />
   </head>
 <style>
-  /* max-width: auto;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.644), rgba(0, 0, 0, 0.668)),
-    url(/Images/background1.jpg);
-  background-size: cover;
-  background-position: center; */
-/* background: url(/Images/bannerground.jpg); */
-/* filter: blur(8px);
-  -webkit-filter: blur(8px); */
 
 /* POPPINS */
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bungee+Spice&family=Caveat:wght@700&family=Luxurious+Roman&family=Montserrat:ital,wght@0,500;1,500&family=Open+Sans:wght@700&family=Pacifico&family=Passion+One&family=Staatliches&family=VT323&display=swap");
@@ -69,24 +61,13 @@ html {
 }
 
 body {
-  background: #89CFF0;
+  background: linear-gradient(to bottom, #002b1f, #1c1c1c);
 }
-
-/* h1,
-h2 {
-  font-family: "Montserrat";
-  font-weight: 400;
-} */
 
 a {
   text-decoration: none;
   color: #fff;
 }
-
-/* li {
-  list-style: none;
-} */
-
 /* header */
 
 header {
@@ -115,7 +96,6 @@ header ul li a {
   text-align: center;
   align-items: center;
   color: #fafafa;
-  /* color: #ded0b6; */
   margin: 0 10px;
   transition: 0.5s;
   position: relative;
@@ -131,10 +111,9 @@ header ul li a::after {
   bottom: 0;
   left: 0;
   top: 25px;
-  /* background-color: #0087ca; */
-  background-color: #002D62;
+  background-color: #228b22;;
   transform-origin: bottom right;
-  transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;x`
 }
 
 header ul li a:hover::after {
@@ -155,8 +134,9 @@ header .navlinks span {
   height: 50px;
   padding: 15px;
   position: fixed;
+  transform: translateY(-10px);
   top: 0;
-  background-color: #1034A6;
+  background-color: #005f4b;
   width: 100%;
   z-index: 1000;
   transition: top 0.5s;
@@ -164,7 +144,7 @@ header .navlinks span {
 
 /* IPAD SIZE */
 
-@media screen and (max-width: 1033px) {
+@media only screen and (max-width: 1033px) {
   header ul {
     position: absolute;
     top: 48px;
@@ -204,18 +184,12 @@ header .navlinks span {
 
 /* PHONE SIZE */
 
-@media screen and (max-width: 493px) {
+@media only screen and (max-width: 493px) {
   header ul {
     margin-top: 5px;
     top: 60px;
     height: 100svh;
   }
-
-  /* header img {
-    width: 50px;
-    min-height: 5svh;
-    line-height: 5svh;
-  } */
 
   header .navlinks span {
     color: white;
@@ -226,7 +200,6 @@ header .navlinks span {
   }
 
   header .home .text h1 {
-    /* margin-top: 40px; */
     font-size: 45px;
   }
 
@@ -235,20 +208,6 @@ header .navlinks span {
     width: 350px;
   }
 }
-
-/*START HOME SECTIOn */
-
-/* .home {
-  height: 100svh;
-} */
-
-/* .home img {
-  width: 100%;
-  max-width: 100%;
-  border-bottom-left-radius: 30px;
-  float: right;
-  height: 100svh;
-} */
 
 .home {
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
@@ -261,7 +220,6 @@ header .navlinks span {
 }
 
 .home .text h1 {
-  /* color: #ded0b6; */
   color: #fafafa;
   text-align: center;
   padding-top: 20px;
@@ -272,7 +230,6 @@ header .navlinks span {
 }
 
 .home p {
-  /* color: #ded0b6; */
   text-align: center;
   max-width: 100%;
   margin: 50px 0;
@@ -290,55 +247,62 @@ header .navlinks span {
 @keyframes change {
   0% {
     background: linear-gradient(rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)),
-      url(/Images/Gallery1.jpg);
+      url(/Images/gal2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   20% {
     background: linear-gradient(rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)),
-      url(/Images/Gallery2.jpg);
+      url(/Images/gal3.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   40% {
     background: linear-gradient(rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)),
-      url(/Images/Gallery3.jpg);
+      url(/Images/gal4.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   60% {
     background: linear-gradient(rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)),
-      url(/Images/Gallery4.jpg);
+      url(/Images/IMG_4112.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   80% {
     background: linear-gradient(rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)),
-      url(/Images/Gallery5.jpg);
+      url(/Images/IMG_4071.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   100% {
     background: linear-gradient(rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)),
-      url(/Images/Gallery6.jpg);
+      url(/Images/IMG_4105.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 }
 
-@media screen and (max-width: 1033px) {
+/* Applying the animation */
+.background {
+  animation: change 30s infinite ease-in-out; /* Duration and smooth easing */
+  transition: background 2s ease-in-out; /* Smooth transitions for intermediate changes */
+}
+
+
+@media only screen and (max-width: 1033px) {
   .home .text h1 {
     font-size: 55px;
   }
 }
 
-@media screen and (max-width: 860px) {
+@media only screen and (max-width: 860px) {
   .home .text h1 {
     font-size: 45px;
   }
@@ -348,7 +312,7 @@ header .navlinks span {
   }
 }
 
-@media screen and (max-width: 712px) {
+@media  only screen and (max-width: 712px) {
   .home .text h1 {
     font-size: 35px;
   }
@@ -358,31 +322,7 @@ header .navlinks span {
   }
 }
 
-/*END HOME SECTIOn */
 
-/* PHONE SIZE */
-
-/* @media (max-width: 779px) {
-  .home {
-    border-radius: 0;
-    max-width: 100%;
-    min-height: 100svh;
-  }
-
-  .home h1 {
-    font-size: 42px;
-    padding-top: 19rem;
-  }
-} */
-
-/* PHONE SIZE */
-
-/* @media (max-width: 373px) {
-  .headline h1 {
-    font-size: 20px;
-  }
-} */
-/* END OF BANNER SECTION */
 
 .about {
   padding-top: 60px;
@@ -403,33 +343,6 @@ header .navlinks span {
   margin-right: auto;
 }
 
-/* .about-info #lights {
-  top: -60px;
-  left: 23rem;
-  position: relative;
-  display: flex;
-  gap: 10px;
-}
-
-.about-info #red {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: red;
-}
-.about-info #orange {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: orange;
-}
-.about-info #green {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: green;
-} */
-
 .about-info h1 {
   text-align: center;
   color: #fafafa;
@@ -445,17 +358,16 @@ header .navlinks span {
   padding: 0 40px;
   color: #fafafa;
   cursor: default;
-  /* font-family: "Montserrat"; */
   font-weight: 600;
   text-align: center;
   margin: auto;
   width: 80%;
   max-width: auto;
   font-size: 24px;
-  /* letter-spacing: 1.5px; */
+
 }
 
-@media screen and (max-width: 1155px) {
+@media only screen and (max-width: 1155px) {
   .about-info h1 {
     text-align: center;
     font-size: 38px;
@@ -465,14 +377,14 @@ header .navlinks span {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media  only screen and (max-width: 700px) {
   .about-info p {
     font-size: 18px;
     width: 100%;
   }
 }
 
-@media screen and (max-width: 467px) {
+@media  only screen and (max-width: 467px) {
   .about {
     padding-top: 0;
   }
@@ -520,6 +432,9 @@ header .navlinks span {
 }
 
 .resort-info {
+  background-color: #02343f;
+  border-radius: 12px;
+  border: 30px solid #02343f;
   width: 40%;
   font-size: 26px;
   color: #fafafa;
@@ -561,7 +476,7 @@ header .navlinks span {
   width: 400px;
 }
 
-@media screen and (max-width: 1155px) {
+@media only screen and (max-width: 1155px) {
   .resort-info {
     font-size: 20px;
   }
@@ -582,7 +497,7 @@ header .navlinks span {
   }
 }
 
-@media screen and (max-width: 940px) {
+@media  only screen and (max-width: 940px) {
   .background h1 {
     text-align: center;
     margin-left: 0;
@@ -617,7 +532,7 @@ header .navlinks span {
   }
 }
 
-@media screen and (max-width: 620px) {
+@media only screen and (max-width: 620px) {
   .about-resort .resort-img img {
     width: 450px;
   }
@@ -628,7 +543,7 @@ header .navlinks span {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .about-resort .resort-img img {
     width: 330px;
   }
@@ -641,27 +556,155 @@ header .navlinks span {
     width: 100%;
   }
 }
-/* @keyframes image {
-  0% {
-    transform: rotate(0);
+/* Keep all the existing styles you provided, followed by these media queries for various devices */
+
+/* Small Laptops */
+@media only screen and (max-width: 1024px) {
+  .gallery #lights {
+    margin-left: 10rem;
   }
 
-  30% {
-    transform: rotate(8deg);
+  .gallery h1 {
+    font-size: 40px;
+    margin-left: 5rem;
   }
 
-  50% {
-    transform: rotate(-8deg);
+  .background h1 {
+    font-size: 38px;
+  }
+}
+
+/* Tablets */
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 10px;
   }
 
-  75% {
-    transform: rotate(24deg);
+  .about-wrapper,
+  .about-resort,
+  .about-owner {
+    flex-direction: column;
+    text-align: center;
   }
 
-  100% {
-    transform: rotate(-16deg);
+  .about-info h1 {
+    font-size: 35px;
   }
-} */
+
+  .gallery #lights {
+    margin-left: 5rem;
+  }
+
+  .gallery h1 {
+    font-size: 30px;
+    margin-left: 3rem;
+  }
+
+  .contact-form .send-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .background h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+/* Mobile Devices */
+@media only screen and (max-width: 576px) {
+  header ul li {
+    padding: 10px;
+  }
+
+  .home .text h1 {
+    font-size: 25px;
+  }
+
+  .home p {
+    font-size: 14px;
+  }
+
+  .about-info h1 {
+    font-size: 28px;
+  }
+
+  .about-info p {
+    font-size: 16px;
+  }
+
+  .gallery-wrapper img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .gallery h1 {
+    font-size: 24px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .contact-section h1 {
+    font-size: 30px;
+  }
+
+  .contact-form .text-box {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+  .background h1 {
+    font-size: 20px;
+  }
+}
+
+/* Small Mobile Devices */
+@media only screen and (max-width: 360px) {
+  header ul li a {
+    font-size: 14px;
+  }
+
+  .home .text h1 {
+    font-size: 20px;
+  }
+
+  .home p {
+    font-size: 12px;
+  }
+
+  .about-info h1 {
+    font-size: 24px;
+  }
+
+  .about-info p {
+    font-size: 14px;
+  }
+
+  .gallery-wrapper img {
+    max-width: 250px;
+  }
+
+  .gallery h1 {
+    font-size: 20px;
+  }
+
+  .contact-form .text-box {
+    font-size: 12px;
+  }
+
+  .contact-form textarea {
+    font-size: 12px;
+  }
+
+  .background h1 {
+    font-size: 18px;
+  }
+}
+
 
 /* START OF PACKAGE */
 /* START OF PACKAGE */
@@ -774,7 +817,8 @@ header .navlinks span {
 /* START OF CONTACT */
 
 .contact-section {
-  background-color: #1877F2;
+  background: linear-gradient(135deg, #02343f, #002b1f);
+  color: #f8f8f8;
   text-align: center;
   width: 100%;
   max-width: auto;
@@ -845,7 +889,7 @@ header .navlinks span {
   background-color: #0782e0;
 }
 
-@media screen and (max-width: 950px) {
+@media only screen and (max-width: 950px) {
   .contact-section {
     flex-direction: column;
   }
@@ -1060,7 +1104,7 @@ body .card .send .circle i {
   color: #fafafa;
 }
 
-@media screen and (max-width: 493px) {
+@media only screen and (max-width: 493px) {
   body .card {
     height: 50%;
     left: 16%;
@@ -1171,6 +1215,921 @@ body .card .send .circle i {
 .close:hover {
   color: #ded0b6;
 }
+Define the fadeInDown animation
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the specific h1 with id 'title' */
+#title {
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Section Styling */
+.story-section {
+  background: linear-gradient(135deg, #1c1c1c, #002b1f); /* Dark Charcoal to Deep Green */
+  color: #f8f8f8;
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Prevent overflow */
+}
+
+/* Container */
+.container {
+  max-width: 95%; /* Utilize more screen width */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Add padding for readability */
+  display: flex; /* Ensure layout alignment */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-between; /* Distribute space evenly */
+}
+
+/* Flexbox Layout for Story Content and Image */
+.story-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px; /* Space between content and image */
+}
+
+.story-content {
+  flex: 2; /* Occupy more space for text */
+  margin-right: 20px;
+}
+
+.about-img {
+  flex: 1; /* Image takes less space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Heading Styling */
+.story-content h1 {
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  color: #f8f8f8;
+  margin-bottom: 10px;
+}
+
+.story-content h1 span {
+  color: #228b22; /* Light Aqua */
+}
+
+/* Professional Divider */
+.heading-divider {
+  width: 800px;
+  height: 4px;
+  background-color: #228b22; /* Light Aqua */
+  margin: 10px 0 20px;
+  border-radius: 2px; /* Smooth Edges */
+}
+
+/* Paragraph Styling */
+.story-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.story-content .highlight {
+  color: #228b22;
+  font-weight: bold;
+}
+
+/* Tree Image Styling */
+.about-img img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensure the image scales properly */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .story-wrapper {
+    flex-direction: column; /* Stack content and image */
+  }
+
+  .story-content {
+    max-width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .about-img img {
+    max-width: 80%; /* Reduce image size on smaller screens */
+  }
+}
+
+#about {
+  background: linear-gradient(135deg, #1c1c1c, #002b1f); /* Dark Charcoal to Deep Green */
+  color: #f8f8f8;
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#about h1 {
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  color: #f8f8f8;
+  margin-bottom: 10px; /* Reduced space to bring closer to the divider */
+  text-align: right;
+  margin-right: 350px;
+  position: relative; /* For positioning the divider */
+}
+
+#about h1 span {
+  color: #228b22; /* Forest Green */
+}
+
+#about h1::after {
+  content: "";
+  display: block;
+  width: 1300px; /* Line width */
+  height: 3px; /* Line thickness */
+  background-color: #228b22; /* Green color as "US" text */
+  margin: 10px 0 0; /* Space above and below the line */
+  position: absolute;
+  left: 0px;
+  transform: translateY(100%); /* Moves it just below the title */
+}
+
+/* About Resort Section */
+.about-resort {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  align-content: space-evenly;
+  flex-wrap: wrap;
+  /* gap: 20px; */
+  margin-bottom: 40px;
+}
+
+.resort-img img {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  border: 2px solid #228b22; /* Box styling updated */
+}
+
+.resort-info {
+  flex: 2; /* Occupy more space for text */
+  font-size: 18px;
+  line-height: 1.8;
+  color: #f8f8f8;
+  margin-bottom: 200px;
+}
+
+.resort-info span span {
+  color: #228b22; /* Updated Highlighted text */
+  font-weight: bold;
+}
+
+/* About Owner Section */
+.about-owner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the left */
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px; /* Add some spacing above */
+}
+
+.owner-img img {
+  max-width: 300px; /* Adjust size to fit proportionally */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  border: 2px solid #228b22; /* Keep the green border */
+  margin-right: 30px; /* Space between the image and text */
+}
+
+.owner-info {
+  flex: 2; /* Make text take more space */
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: auto;
+  color: #f8f8f8;
+  max-width: 600px; /* Limit the text width to make it easier to read */
+}
+
+.owner-info span span {
+  color: #228b22; /* Updated Highlighted text */
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .about-resort, .about-owner {
+    flex-direction: column; /* Stack content */
+    text-align: center; /* Center align for mobile */
+  }
+
+  .resort-info, .owner-info {
+    margin: 0 auto;
+  }
+
+  .resort-img img, .owner-img img {
+    max-width: 80%; /* Reduce image size on smaller screens */
+    margin: 0 auto;
+  }
+
+  #about h1 {
+    margin-left: 0; /* Center-align title for small screens */
+    text-align: center;
+  }
+
+  #about h1::after {
+    left: 50%; /* Center-align the divider */
+    transform: translateX(-50%) translateY(100%); /* Adjust positioning */
+  }
+}
+
+/* Gallery Section */
+#gallery {
+  background: #1c1c1c; /* Dark background */
+  color: #f8f8f8;
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+#gallery h1 {
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  color: #f8f8f8;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#gallery h1 span {
+  color: #228b22; /* Highlight the word "Images" */
+}
+
+/* Gallery Wrap */
+.gallery-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Gallery Images */
+.gallery-wrapper img {
+  width: 100%;
+  height: auto;
+  max-width: 350px; /* Limit the size for consistent layout */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.gallery-wrapper img:hover {
+  transform: scale(1.25);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .gallery-wrap {
+    flex-direction: column; /* Stack images vertically on smaller screens */
+    align-items: center;
+  }
+
+  .gallery-wrapper {
+    margin-bottom: 40px; /* Add spacing between sections */
+  }
+
+  .gallery-wrapper img {
+    max-width: 90%; /* Reduce image size on mobile */
+  }
+}
+/* RESPONSIVE */
+/* Responsive Design Enhancements */
+
+/* For Small Laptops */
+@media only screen and(max-width: 1024px) {
+  .ai-bot {
+    height: 100vh;
+  }
+
+  .chathead {
+    top: 85%;
+    left: 90%;
+  }
+
+  body .card {
+    height: 70%;
+    width: 20rem;
+    left: 58%;
+    top: 25%;
+  }
+
+  body .card #header h1 {
+    font-size: 1.5vw;
+  }
+
+  body .card #message-section {
+    padding: 0 1.5vw;
+    height: 20vw;
+  }
+
+  body .card .send .circle i {
+    font-size: 2vw;
+    margin-left: 3vw;
+    margin-top: 1vw;
+  }
+
+  .login-popup {
+    width: 400px;
+    height: 400px;
+  }
+
+  .login-popup h2 {
+    font-size: 30px;
+  }
+
+  .login-popup input {
+    height: 50px;
+  }
+}
+
+/* For Tablets */
+@media only screen and(max-width: 768px) {
+  .chathead {
+    top: 85%;
+    left: 80%;
+  }
+
+  body .card {
+    height: 60%;
+    width: 18rem;
+    left: 50%;
+    top: 30%;
+  }
+
+  body .card #header h1 {
+    font-size: 14px;
+  }
+
+  body .card #message-section {
+    height: 15vw;
+  }
+
+  body .card #message-section .message {
+    font-size: 1vw;
+    line-height: 1.5vw;
+  }
+
+  body .card #input-section input {
+    font-size: 0.8vw;
+    height: 2.5vw;
+    width: 12vw;
+  }
+
+  .login-popup {
+    width: 320px;
+    height: 350px;
+  }
+
+  .login-popup h2 {
+    font-size: 24px;
+  }
+
+  .login-popup input {
+    height: 40px;
+  }
+}
+
+/* For Mobile Devices */
+@media only screen and (max-width: 576px) {
+  .chathead {
+    top: 85%;
+    left: 70%;
+  }
+
+  body .card {
+    height: 50%;
+    width: 15rem;
+    left: 45%;
+    top: 35%;
+  }
+
+  body .card #header h1 {
+    font-size: 12px;
+  }
+
+  body .card #message-section {
+    height: 10vw;
+  }
+
+  body .card #message-section .message {
+    font-size: 10px;
+  }
+
+  body .card #input-section input {
+    font-size: 10px;
+    height: 2vw;
+    width: 10vw;
+  }
+
+  body .card .send .circle i {
+    font-size: 2vw;
+    margin-left: 2vw;
+  }
+
+  .login-popup {
+    width: 280px;
+    height: 300px;
+  }
+
+  .login-popup h2 {
+    font-size: 20px;
+  }
+
+  .login-popup input {
+    height: 35px;
+  }
+}
+
+/* For Small Mobile Devices */
+@media only screen and (max-width: 360px) {
+  .chathead {
+    top: 85%;
+    left: 60%;
+  }
+
+  body .card {
+    height: 45%;
+    width: 12rem;
+    left: 40%;
+    top: 40%;
+  }
+
+  body .card #header h1 {
+    font-size: 10px;
+  }
+
+  body .card #message-section {
+    height: 8vw;
+  }
+
+  body .card #message-section .message {
+    font-size: 8px;
+  }
+
+  body .card #input-section input {
+    font-size: 8px;
+    height: 1.5vw;
+    width: 8vw;
+  }
+
+  body .card .send .circle i {
+    font-size: 1.5vw;
+    margin-left: 1vw;
+  }
+
+  .login-popup {
+    width: 240px;
+    height: 260px;
+  }
+
+  .login-popup h2 {
+    font-size: 16px;
+  }
+
+  .login-popup input {
+    height: 30px;
+  }
+}
+
+/* Adjustments for Gallery and Story Sections */
+@media only screen and (max-width: 768px) {
+  .story-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story-content {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .about-img img {
+    max-width: 80%;
+  }
+
+  #gallery h1 {
+    font-size: 30px;
+  }
+
+  .gallery-wrapper img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .story-wrapper {
+    text-align: center;
+  }
+
+  .story-content h1 {
+    font-size: 24px;
+  }
+
+  .story-content p {
+    font-size: 14px;
+  }
+
+  #gallery h1 {
+    font-size: 24px;
+  }
+
+  .gallery-wrapper img {
+    max-width: 85%;
+  }
+}
+/* Media Queries */
+
+/* Small Phones (up to 480px) */
+@media only screen and (max-width: 480px) {
+  .navlinks {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #menulist {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    background: #228b22;
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+
+  #menulist li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .fa-bars {
+    display: block; /* Show hamburger menu */
+  }
+
+  .home .text h1 {
+    font-size: 10vw;
+  }
+
+  .home .text p {
+    font-size: 5vw;
+  }
+}
+
+/* Medium Devices (481px to 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  #menulist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .home .text h1 {
+    font-size: 6vw;
+  }
+
+  .home .text p {
+    font-size: 3.5vw;
+  }
+}
+
+/* Larger Devices (769px and above) */
+@media only screen and (min-width: 769px) {
+  #menulist {
+    display: flex !important;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+} 
+/* Media Queries */
+
+/* Small Phones (up to 480px) */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 8vw;
+  }
+
+  p {
+    font-size: 4vw;
+    line-height: 1.4;
+  }
+
+  .story-content,
+  .resort-info,
+  .owner-info {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .gallery-wrapper img {
+    max-width: 80px;
+    margin: 5px;
+  }
+
+  .text-box, textarea, .send-btn {
+    font-size: 3.5vw;
+  }
+
+  .chathead {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Medium Phones (481px to 767px) */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  h1 {
+    font-size: 7vw;
+  }
+
+  p {
+    font-size: 3.8vw;
+    line-height: 1.6;
+  }
+
+  .gallery-wrapper img {
+    max-width: 100%;
+    margin: 10px;
+  }
+
+  .text-box, textarea, .send-btn {
+    font-size: 4vw;
+  }
+
+  .chathead {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Tablets (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 6vw;
+  }
+
+  p {
+    font-size: 3vw;
+    line-height: 1.8;
+  }
+
+  .gallery-wrapper img {
+    max-width: 120px;
+  }
+
+  .text-box, textarea, .send-btn {
+    font-size: 4.5vw;
+  }
+
+  .chathead {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Large Devices (1025px and above) */
+@media only screen and (min-width: 1025px) {
+  h1 {
+    font-size: 5vw;
+  }
+
+  p {
+    font-size: 2.5vw;
+    line-height: 2;
+  }
+
+  .gallery-wrapper img {
+    max-width: 150px;
+  }
+
+  .text-box, textarea, .send-btn {
+    font-size: 4vw;
+  }
+
+  .chathead {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* General Mobile Adjustments */
+@media only screen and (max-width: 480px) {
+  /* Contact Us Section */
+  .contact-section h1 {
+    font-size: 6vw; /* Scale title for smaller screens */
+    text-align: center;
+  }
+
+  .contact-section .content-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-section .contact-form input,
+  .contact-section .contact-form textarea {
+    width: 95%;
+    font-size: 4vw;
+    margin: 10px auto;
+  }
+
+  .contact-section .contact-form .send-btn {
+    width: 95%;
+    font-size: 4.5vw;
+  }
+
+
+  /* Gallery Section */
+  .gallery h1 {
+    font-size: 6.5vw;
+    text-align: center;
+  }
+
+  .gallery-wrapper img {
+    max-width: 90%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  /* Home Section */
+  .home h1 {
+    font-size: 7vw;
+    text-align: center;
+  }
+
+  .home p {
+    font-size: 4vw;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .logo img {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* iPhone X, XS, 11 Pro */
+@media only screen and (min-width: 375px) and (max-width: 812px) {
+  /* Similar adjustments, scaled slightly up */
+  h1 {
+    font-size: 6.5vw;
+  }
+
+  p {
+    font-size: 3.8vw;
+  }
+
+  .gallery-wrapper img {
+    max-width: 85%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 4vw;
+  }
+}
+
+/* iPhone 12/13/14 Pro */
+@media only screen and (min-width: 390px) and (max-width: 844px) {
+  h1 {
+    font-size: 6vw;
+  }
+
+  p {
+    font-size: 3.5vw;
+  }
+
+  .gallery-wrapper img {
+    max-width: 95%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 3.8vw;
+  }
+}
+
+/* iPhone Pro Max and Large Devices */
+@media only screen and (min-width: 430px) and (max-width: 926px) {
+  h1 {
+    font-size: 5.5vw;
+  }
+
+  p {
+    font-size: 3.2vw;
+    line-height: 1.8;
+  }
+
+  .gallery-wrapper img {
+    max-width: 95%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 3.5vw;
+  }
+}
+
+/* Landscape Orientation */
+@media only screen and (orientation: landscape) {
+  h1 {
+    font-size: 4vw;
+  }
+
+  p {
+    font-size: 3vw;
+    
+  }
+  .gallery-wrapper img {
+    width: 100%;
+    max-width: 300px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 2.5vw;
+  }
+}
+media (max-width: 1024px) {
+  .story-section h1 {
+    font-size: auto; /* Slightly smaller header for tablet sizes */
+  }
+
+  .story-section p {
+    font-size: auto; /* Smaller text size for readability */
+    width: auto;
+  }
+
+  .story-section .about-img img {
+    max-width: auto; /* Ensures image doesn't overflow */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .story-section h1 {
+    font-size: auto; /* Further reduce header font for smaller screens */
+  }
+
+  .story-section p {
+    font-size: auto; /* Adjust paragraph size for readability */
+    width: auto;
+  }
+
+  .story-section .about-img img {
+    max-width: 100%; /* Full-width image on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .story-section h1 {
+    font-size: auto; /* Even smaller font size for very small devices */
+  }
+
+  .story-section p {
+    font-size: 6vw; /* Larger text for readability on small screens */
+    width: auto; /* Take up almost full width of screen */
+  }
+
+  .story-section .about-img img {
+    max-width: auto; /* Ensure image fits properly */
+  }
+}
 
 </style>
   <body>
@@ -1179,36 +2138,31 @@ body .card .send .circle i {
       crossorigin="anonymous"
     ></script>
     <header>
-      <div id="navbar">
-        <div class="navlinks">
-          <ul id="menulist">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#story">Story</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="package.php">Packages</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li>
-              <a href="reservationform.php" id="btn_booking" target="_blank"
-                >BOOK NOW</a
-              >
-            </li>
-          </ul>
-          <span
-            id="menu-toggle-icon"
-            class="fa fa-bars"
-            onclick="menutoggle()"
-          ></span>
-        </div>
-      </div>
-    </header>
+  <div id="navbar">
+    <div class="navlinks">
+      <ul id="menulist">
+        <li><a href="guest.php#home">Home</a></li>
+        <li><a href="guest.php#story">Story</a></li>
+        <li><a href="guest.php#about">About</a></li>
+        <li><a href="package.php" id="package-link">Accommodation</a></li>
+        <li><a href="guest.php#gallery">Gallery</a></li>
+        <li><a href="guest.php#contact">Contact</a></li>
+        <li><a href="reservationform.php" id="btn_booking" target="_blank">BOOK NOW</a></li>
+        <!-- Login Button -->
+        <li><a href="index.php" id="btn_login">Login</a></li>
+      </ul>
+      <span class="fa fa-bars" onclick="menutoggle()"></span>
+    </div>
+  </div>
+</header>
+
     <section class="home" id="home">
       <div class="content">
         <div class="logo">
           <img src="Images/marananLogo.jpg" width="150" alt="" />
         </div>
         <div class="text">
-          <h1>Maranan Resort</h1>
+          <h1 id="title">Maranan Resort</h1>
           <p>"Escape the hustle and bustle of city life at Maranan Resort" </p>
             <p>"where peace and tranquility reign."</p>
         </div>
@@ -1223,120 +2177,93 @@ body .card .send .circle i {
     <div class="about" id="story">
       <div class="about-wrapper">
         <div class="about-info">
-          <h1>Our <span style="color: #228b22">Story</span></h1>
-          <div id="lights">
-            <div id="red"></div>
-            <div id="orange"></div>
-            <div id="green"></div>
-          </div>
-          <div class="paragraph">
-            <p>
-              Here at
-              <span style="color: #228b22">Maranan Resort</span>, our
-              journey started with a simple idea: to create a private getaway
-              like no other. With a team dedicated to excellence and an
-              unwavering commitment to our guests, we've earned recognition that
-              fuels our passion for providing exceptional experiences.
-            </p>
-            <br />
-            <p>
-              Step into our world and discover the beauty that surrounds us.
-              From lush landscapes to cozy accommodations, every corner is
-              designed with your comfort in mind. Your presence is what makes
-              our story come alive.
-            </p>
-            <br />
-            <p>
-              As you dive into your stay with us, remember that our story is
-              intertwined with yours. Your experiences shape our future, and
-              we're here to make sure each moment feels perfect for you.
-            </p>
-          </div>
-        </div>
-        <div class="about-img">
-          <img src="Images/Coconut_tree1.png" alt="" />
-        </div>
+        <section class="story-section">
+  <div class="container">
+    <div class="story-wrapper">
+      <!-- Story Content -->
+      <div class="story-content">
+        <h1>
+          Our <span>Story</span>
+        </h1>
+        <div class="heading-divider"></div>
+        <p>
+          Here at <span class="highlight">Maranan Resort</span>, our journey started with a simple idea: 
+          to create a getaway like no other. With a team dedicated to excellence and an unwavering commitment 
+          to our guests, we've earned recognition that fuels our passion for providing exceptional experiences.
+        </p>
+        <p>
+          Step into our world and discover the beauty that surrounds us. From lush landscapes to cozy 
+          accommodations, every corner is designed with your comfort in mind. Your presence is what makes our 
+          story come alive.
+        </p>
+        <p>
+          As you dive into your stay with us, remember that our story is intertwined with yours. Your 
+          experiences shape our future, and we're here to make sure each moment feels perfect for you.
+        </p>
+      </div>
+      <!-- Tree Image -->
+      <div class="about-img">
+        <img src="Images/Coconut_tree1.png" alt="Coconut Tree" />
+      </div>
+    </div>
+  </div>
+</section>
       </div>
     </div>
 
     <!-- START OF BACKGROUND -->
-    <!-- START OF BACKGROUND -->
-    <!-- START OF BACKGROUND -->
-    <!-- START OF BACKGROUND -->
 
     <section class="background" id="about">
-      <h1>About<span style="color: #228b22"> Us</span></h1>
-      <div class="about-resort">
-        <div class="resort-img">
-          <img src="Images/about.jpg" alt="" />
-        </div>
-        <div class="resort-info"> 
-          <span
-            >The <span style="color: #228b22">Maranan Resort</span> is
-            owned by Jenelyn Maranan and opened for business on January 6,
-            2023. Located in Balete, Batangas City, Brgy. Sitio 2 Sahingan, and
-            we offers a variety of activities. We started it as a simple
-            get-together place, but we managed to make it this big to make our
-            dearest customers satisfy their needs.
-          </span>
-        </div>
-      </div>
-      <div class="about-owner">
-        <div class="owner-img"><img src="Images/owner.jpg" alt="" /></div>
-        <div class="owner-info">
-          <span
-            >This is <span style="color: #32fb32">Jenelyn Maranan Cortes</span>.
-            The owner of the
-            <span style="color: #32fb32">Maranan Resort</span>. Ma'am
-            Jenelyn is 30yrs old.
-          </span>
-        </div>
-      </div>
-    </section>
+  <h1>About<span> Us</span></h1>
+  <!-- About Resort -->
+  <div class="about-resort">
+    <!-- Resort Image -->
+    <div class="resort-img">
+      <img src="Images/about.jpg" alt="Maranan Resort">
+    </div>
+    <!-- Resort Info -->
+    <div class="resort-info">
+      <span>
+        The <span>Maranan Resort</span> is owned by Jenelyn Maranan and opened for business on March 2017. Located in Sitio Durungao, Bauan, Batangas, we provide a range of amenities and services to create a comfortable, memorable, and enjoyable experience for guests. We started it as a simple get-together place, but we managed to make it this big to make our dearest customers satisfy their needs.
+      </span>
+    </div>
+  </div>
+</section>
+
 
     <!-- END OF BACKGORUND -->
-    <!-- END OF BACKGORUND -->
-    <!-- END OF BACKGORUND -->
-    <!-- END OF BACKGORUND -->
-    <!-- END OF BACKGORUND -->
 
-    <!-- GALLERY -->
-    <!-- GALLERY -->
-    <!-- GALLERY -->
-    <!-- GALLERY -->
-    <!-- GALLERY -->
-    <!-- GALLERY -->
     <!-- GALLERY -->
 
     <section class="gallery" id="gallery">
-      <h1>Gallery / <span style="color: #228b22">Images</span></h1>
-      <div class="gallery-wrap">
-        <div class="gallery-wrapper">
-          <img src="Images/Gallery1.jpg" />
-          <img src="Images/Gallery2.jpg" />
-          <img src="Images/Gallery3.jpg" />
-          <img src="Images/Gallery4.jpg" />
-          <img src="Images/Gallery17.jpg" />
-          <img src="Images/Gallery.jpg" />
-        </div>
-        <div class="gallery-wrapper">
-          <img src="Images/Gallery7.jpg" />
-          <img src="Images/Gallery8.jpg" />
-          <img src="Images/Gallery9.jpg" />
-          <img src="Images/Gallery10.jpg" />
-          <img src="Images/Gallery13.jpg" />
-          <img src="Images/Gallery14.jpg" />
-        </div>
-        <div class="gallery-wrapper">
-          <img src="Images/Gallery14.jpg" />
-          <img src="Images/Gallery15.jpg" />
-          <img src="Images/Gallery11.jpg" />
-          <img src="Images/Gallery16.jpg" />
-          <img src="Images/Gallery5.jpg" />
-          <img src="Images/Gallery6.jpg" />
-        </div>
-      </div>
-    </section>
+  <h1>Gallery / <span style="color: #228b22">Images</span></h1>
+  <div class="gallery-wrap">
+    <div class="gallery-wrapper">
+      <img src="Images/gal2.jpg" alt="Image 1" />
+      <img src="Images/gal3.jpg" alt="Image 2" />
+      <img src="Images/gal4.jpg" alt="Image 3" />
+      <img src="Images/IMG_4071.jpg" alt="Image 4" />
+      <img src="Images/IMG_4078.jpg" alt="Image 5" />
+      <img src="Images/IMG_4089.jpg" alt="Image 6" />
+    </div>
+    <div class="gallery-wrapper">
+      <img src="Images/IMG_4093.jpg" alt="Image 7" />
+      <img src="Images/IMG_4105.jpg" alt="Image 8" />
+      <img src="Images/IMG_4107.jpg" alt="Image 9" />
+      <img src="Images/IMG_4112.jpg" alt="Image 10" />
+      <img src="Images/IMG_4118.jpg" alt="Image 11" />
+      <img src="Images/IMG_4131.jpg" alt="Image 12" />
+    </div>
+    <div class="gallery-wrapper">
+      <img src="Images/IMG_4132.jpg" alt="Image 13" />
+      <img src="Images/IMG_4133.jpg" alt="Image 14" />
+      <img src="Images/IMG_4134.jpg" alt="Image 15" />
+      <img src="Images/IMG_4135.jpg" alt="Image 16" />
+      <img src="Images/IMG_4137.jpg" alt="Image 17" />
+      <img src="Images/IMG_4139.jpg" alt="Image 18" />
+    </div>
+  </div>
+</section>
     <!-- Fullscreen overlay -->
     <div id="fullscreen" onclick="closeFullscreen()">
       <img id="fullscreenImage" src="" />
@@ -1425,19 +2352,9 @@ body .card .send .circle i {
     </div>
 
     <!-- LOG IN FORM -->
-    <!-- LOG IN FORM -->
-    <!-- LOG IN FORM -->
-    <!-- LOG IN FORM -->
-    <!-- LOG IN FORM -->
-    <!-- LOG IN FORM -->
 
     <!-- AI IMPLEMENTATION -->
-    <!-- AI IMPLEMENTATION -->
-    <!-- AI IMPLEMENTATION -->
-    <!-- AI IMPLEMENTATION -->
-    <!-- AI IMPLEMENTATION -->
-    <!-- AI IMPLEMENTATION -->
-    <!-- AI IMPLEMENTATION -->
+
 
     <!-- <section class="ai-bot"> -->
     <button name="button" role="button" class="chathead" onclick="openChatHead()">
